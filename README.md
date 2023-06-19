@@ -12,4 +12,8 @@ For now, this extension provides 1 `reveals` format:
 
 ## Installation
 
-_TODO_
+To start a new presentation:
+
+```bash
+quarto use template ThinkR-open/quakr
+```
