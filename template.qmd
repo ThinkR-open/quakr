@@ -1,0 +1,304 @@
+---
+title: ThinkRidentity
+format: thinkridentity-revealjs
+author: Arthur Bréant
+date: last-modified
+---
+
+# **Slide de transition** : Titre niveau 1
+
+# **Slide de transition** : Titre niveau 1
+
+Éventuellement, avec du texte supplémentaire. 
+
+
+## **Slide simple**: Titre niveau 2
+
+Avec Quarto, il est possible de créer une slide à partir d'un titre de niveau 2.
+
+Comme le cas de cette slide.
+
+Il s'agit d'une slide de cours. 
+
+```{r eval = TRUE, echo=FALSE}
+cat("## titre simple")
+```
+
+--- 
+
+On peut aussi créer une slide, **sans titre**, avec `--- `
+
+Il peut s'agir d'une slide de cours.
+
+```{r eval = TRUE, echo=FALSE}
+cat("--- ")
+```
+
+## **Slide simple avec commentaire**
+
+Certaines slides peuvent avoir **des notes** pour le formateur. 
+
+Pour y accéder, soit pour le menu burger, soit par la touche `s` de votre clavier.
+
+```{r eval = TRUE, echo=FALSE}
+cat("::: {.notes}")
+cat("Coucou, tu le vois ?")
+cat(":::")
+```
+
+::: {.notes}
+Je te vois !
+:::
+
+## **Slide simple avec code annoté**
+
+Nécessite la version 1.3 de Quarto : <https://quarto.org/docs/authoring/code-annotation.html>
+
+```{r eval=FALSE, echo=TRUE}
+library(tidyverse)
+library(palmerpenguins)
+penguins |> # <1>
+  mutate( # <2>
+    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
+    bill_area  = bill_depth_mm * bill_length_mm # <2>
+  ) # <2>
+```
+
+1. Take `penguins`, and then,
+2. add new columns for the bill ratio and bill area.
+
+
+<iframe width="100%" height="350" src="https://quarto.org/docs/authoring/code-annotation-example/revealjs.html"></iframe>
+
+## **Slide simple avec code highlighté**
+
+Dans le cours sur Shiny, notamment, on a du code _highlighté_. 
+
+C'est possible de le faire dans Quarto :
+
+::: {.columns}
+::: {.column width="50%"}
+
+```{.r code-line-numbers='1,2,4,7'}
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                     
+  mutate(                                       
+    bill_ratio = bill_depth_mm / bill_length_mm,
+    bill_area  = bill_depth_mm * bill_length_mm 
+  )   
+```
+
+:::
+::: {.column width="50%"}
+
+
+```{r eval=TRUE, echo=FALSE}
+cat("```{.r code-line-numbers='1,2,4,7'}")
+cat("library(tidyverse)")
+cat("library(palmerpenguins)")
+cat("penguins |>                                     ")
+cat("  mutate(                                       ")
+cat("    bill_ratio = bill_depth_mm / bill_length_mm,")
+cat("    bill_area  = bill_depth_mm * bill_length_mm ")
+cat("  )   ")
+cat("```")
+```
+
+:::
+::::
+
+## **Slide simple avec code highlighté (progressivement)**
+
+Et de le faire "_progressivement_"
+
+::: {.columns}
+::: {.column width="50%"}
+
+```{.r code-line-numbers="1|2|4,7"}
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                     
+  mutate(                                       
+    bill_ratio = bill_depth_mm / bill_length_mm,
+    bill_area  = bill_depth_mm * bill_length_mm 
+  )   
+```
+
+:::
+::: {.column width="50%"}
+
+
+```{r eval=TRUE, echo=FALSE}
+cat("```{.r code-line-numbers='1|2|4,7'}")
+cat("library(tidyverse)")
+cat("library(palmerpenguins)")
+cat("penguins |>                                     ")
+cat("  mutate(                                       ")
+cat("    bill_ratio = bill_depth_mm / bill_length_mm,")
+cat("    bill_area  = bill_depth_mm * bill_length_mm ")
+cat("  )   ")
+cat("```")
+```
+
+:::
+::::
+
+
+## **Slide simple avec colonnes**
+
+::: {.columns}
+::: {.column width="30%"}
+
+```{r eval = FALSE, echo=TRUE}
+library(shiny)
+```
+
+:::
+::: {.column width="70%"}
+
+```{r eval = FALSE, echo=TRUE}
+server <- function(input, output,session) {
+  output$heure_petit_dej <- renderPlot({ ... })
+}
+```
+:::
+::::
+
+\ 
+  
+```{r eval = TRUE, echo=FALSE}
+cat("::: {.columns}")
+cat("::: {.column width='30%'}")
+cat("")
+cat("```{r eval = FALSE, echo=TRUE}")
+cat("library(shiny)")
+cat("```")
+cat("")
+cat(":::")
+cat("::: {.column width='70%'}")
+cat("```{r eval = FALSE, echo=TRUE}")
+cat("server <- function(input, output,session) {")
+cat("  output$heure_petit_dej <- renderPlot({ ... })")
+cat("}")
+cat("```")
+cat(":::")
+cat("::::")
+```
+
+## **Slide simple** avec les éléments centrés
+
+Il est possible de placer les éléments dans la page ou dans une colonne avec `{.center-items}`, `{.right-items}`
+
+::: {.columns}
+::: {.column  width="33%"}
+
+Aligné à gauche
+
+```{r eval = FALSE, echo=TRUE}
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+ui <- fluidPage(
+  ...
+)
+```
+
+:::
+::: {.column .center-items  width="33%"}
+
+Centré
+
+```{r eval = FALSE, echo=TRUE}
+server <- function(input,
+                   output,
+                   session) {
+  ...
+}
+```
+:::
+::: {.column .right-items  width="33%"}
+
+Aligné à droite
+
+```{r eval = FALSE, echo=TRUE}
+shiny::runApp()
+```
+:::
+::::
+
+\ 
+
+```{r eval = TRUE, echo=FALSE}
+cat("::: {.center-items }")
+cat("Au milieu")
+cat(":::")
+```
+
+::: {.center-items }
+Au milieu
+:::
+
+```{r eval = TRUE, echo=FALSE}
+cat("::: {.right-items }")
+cat("A droite")
+cat(":::")
+```
+
+::: {.right-items }
+À droite
+:::
+
+# Composants
+
+## Les dashed-box
+
+::: {.dashed-box-orange-flex }
+un carré orange
+:::
+
+::: {.center-items}
+peut devenir
+::: 
+
+::: {.dashed-box-blue}
+un carré bleu
+:::
+
+::: {.center-items}
+ou redevenir
+:::
+
+::: {.dashed-box-orange}
+un carré orange
+:::
+
+
+## Les call out
+
+Ce sont des composants nativement intégrés dans Quarto. 
+
+Notez qu'il existe cinq types d'appel, à savoir : 
+`note`, `tip`, `warning`, `caution`, and `important`.
+
+:::{.callout-warning}
+Warning
+:::
+
+:::{.callout-note}
+Note
+:::
+
+:::{.callout-tip}
+Tip
+:::
+
+:::{.callout-caution}
+Caution
+:::
+
+:::{.callout-important}
+Important
+:::
