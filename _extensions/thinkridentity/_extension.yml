@@ -7,11 +7,11 @@ contributes:
     revealjs:
       slideNumber: true
       theme: [default, thinkridentity.scss]
-      logo: ../assets/logo.png
+      logo: logo.png
       footer: |
         **<i class="las la-book"></i> {{< meta title >}}** |
         Retrouvez nous sur <https://thinkr.fr>
       title-slide-attributes:
-        data-background-image: ../assets/background.png
+        data-background-image: background.png
       code-annotations: hover
       chalkboard: true
