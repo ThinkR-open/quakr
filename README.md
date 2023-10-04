@@ -17,3 +17,8 @@ To start a new presentation:
 ```bash
 quarto use template ThinkR-open/quakr
 ```
+## Dev
+
+All developments are to be carried out on the `dev` branch.
+
+For each new release a PR is created from `dev` to `main`.
