@@ -15,3 +15,5 @@ contributes:
         data-background-image: background.png
       code-annotations: hover
       chalkboard: true
+      execute:
+        echo: true
