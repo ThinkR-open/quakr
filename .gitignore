@@ -1,2 +1,5 @@
 *.html
 *_files/
+.Rhistory
+.Rproj.user/
+quakr.Rproj
