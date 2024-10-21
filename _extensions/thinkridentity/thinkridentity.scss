@@ -27,6 +27,7 @@ $presentation-font-size-root: 20px;
 $presentation-h1-font-size: 3.5em;
 $presentation-h2-font-size: 2.5em;
 $presentation-h3-font-size: 1.75em;
+$presentation-h4-font-size: 1.25em;
 
 $code-block-font-size: 13px;
 
@@ -47,7 +48,10 @@ h2 {
 h2,
 h3 {
   font-family: 'Yanone Kaffeesatz', sans-serif !important;
-  text-transform: uppercase !important;
+  font-weight: 600 !important;
+}
+h4 {
+  font-family: 'Yanone Kaffeesatz', sans-serif !important;
   font-weight: 600 !important;
 }
 
@@ -77,12 +81,15 @@ h3 {
   padding: 2px 4px;
   border-radius: 5px;
   color: $black;
-  font-size: 14px;
   background-color: #f3f3f388;
 }
 
-.small-code pre {
-  font-size: 10px;
+.reveal h3 code {
+  font-size: calc($presentation-h3-font-size - 1em);
+}
+
+.reveal p code {
+  font-size: calc($presentation-font-size-root - 2px);
 }
 
 .reveal pre code {
