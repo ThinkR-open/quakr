@@ -117,11 +117,16 @@ $presentation-h3-font-size: 1.25em;
   padding: 6px 9px;
   line-height: 1.5em;
   font-size: calc($presentation-font-size-root - 8px);
+  margin-bottom: 10px;
 }
 
 .reveal div.sourceCode {
   border: 1px solid #c8c8c8;
-  margin: 0 0 10px 0 !important;
+  margin-bottom: 10px !important;
+}
+
+.sourceCode {
+  margin-bottom: 0 !important;
 }
 
 code span.fu {
