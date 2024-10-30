@@ -118,6 +118,15 @@ $presentation-h3-font-size: 1.25em;
   line-height: 1.5em;
   font-size: calc($presentation-font-size-root - 8px);
   margin-bottom: 10px;
+  max-height: 600px;
+}
+
+.reveal pre.sourceCode code {
+  max-height: 600px;
+}
+
+.reveal pre.smallcode code {
+  font-size: calc($presentation-font-size-root - 12px);
 }
 
 .reveal div.sourceCode {
