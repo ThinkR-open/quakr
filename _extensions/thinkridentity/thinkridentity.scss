@@ -41,9 +41,16 @@ $presentation-h3-font-size: 1.25em;
   .quarto-title-author {
     color: $black;
   }
+  
+  .subtitle {
+  color: $black;
+  font-weight: 600;
+  font-family: 'Yanone Kaffeesatz';
+  font-size: $presentation-h2-font-size;
+  }
 }
 
-.subtitle {
+.reveal p.subtitle {
   color: $black;
   font-weight: 600;
   font-family: 'Yanone Kaffeesatz';
