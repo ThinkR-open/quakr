@@ -11,6 +11,20 @@ date: last-modified
 
 Éventuellement, avec du texte supplémentaire. 
 
+## **Slide simple**: Titre niveau 2
+
+Il est possible de placer du texte au centre de la slide avec {.center-slide}
+
+```{r eval = TRUE, echo=FALSE}
+cat("::: {.center-slide}")
+cat("Tu m'as dis centré ?")
+cat(":::")
+```
+
+::: {.center-slide}
+Oui regarde, et même avec du `code`!
+:::
+
 
 ## **Slide simple**: Titre niveau 2
 

@@ -30,6 +30,23 @@ $presentation-h3-font-size: 1.25em;
 
 /*-- scss:rules --*/
 
+.center-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  font-size: 40px;
+
+  p {
+    font-size: 40px;
+
+    code {
+      font-size: 40px;
+    }
+  }
+}
+
+
 #title-slide {
   .title {
   color: $orange;
