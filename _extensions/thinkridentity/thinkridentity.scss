@@ -90,6 +90,19 @@ $presentation-h3-font-size: 1.25em;
   text-align: right;
 }
 
+.grey-items {
+  color:grey;
+
+  p {
+    color:grey;
+
+    code {
+      color:grey;
+    }
+  }
+}
+
+
 .middle-items {
   height: 100%;
   display: grid;
