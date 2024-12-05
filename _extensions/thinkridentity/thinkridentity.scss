@@ -48,6 +48,9 @@ $presentation-h3-font-size: 1.25em;
   font-weight: 600;
   font-family: 'Yanone Kaffeesatz';
   font-size: $presentation-h2-font-size;
+    code {
+      font-size: 40px;
+    }
   }
 }
 
