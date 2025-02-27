@@ -9,11 +9,13 @@ date: last-modified
 
 # **Slide de transition** : Titre niveau 1
 
-Éventuellement, avec du texte supplémentaire. 
+Éventuellement, avec du texte supplémentaire.
 
 ## **Slide simple**: Titre niveau 2
 
 Il est possible de placer du texte au centre de la slide avec {.center-slide}
+
+::: {.center-slide}
 
 ```{r eval = TRUE, echo=FALSE}
 cat("::: {.center-slide}")
@@ -21,7 +23,7 @@ cat("Tu m'as dis centré ?")
 cat(":::")
 ```
 
-::: {.center-slide}
+
 Oui regarde, et même avec du `code`!
 :::
 
@@ -32,13 +34,13 @@ Avec Quarto, il est possible de créer une slide à partir d'un titre de niveau 
 
 Comme le cas de cette slide.
 
-Il s'agit d'une slide de cours. 
+Il s'agit d'une slide de cours.
 
 ```{r eval = TRUE, echo=FALSE}
 cat("## titre simple")
 ```
 
---- 
+---
 
 On peut aussi créer une slide, **sans titre**, avec `--- `
 
@@ -50,7 +52,7 @@ cat("--- ")
 
 ## **Slide simple avec commentaire**
 
-Certaines slides peuvent avoir **des notes** pour le formateur. 
+Certaines slides peuvent avoir **des notes** pour le formateur.
 
 Pour y accéder, soit pour le menu burger, soit par la touche `s` de votre clavier.
 
@@ -86,7 +88,7 @@ penguins |> # <1>
 
 ## **Slide simple avec code highlighté**
 
-Dans le cours sur Shiny, notamment, on a du code _highlighté_. 
+Dans le cours sur Shiny, notamment, on a du code _highlighté_.
 
 C'est possible de le faire dans Quarto :
 
@@ -96,11 +98,11 @@ C'est possible de le faire dans Quarto :
 ```{.r code-line-numbers='1,2,4,7'}
 library(tidyverse)
 library(palmerpenguins)
-penguins |>                                     
-  mutate(                                       
+penguins |>
+  mutate(
     bill_ratio = bill_depth_mm / bill_length_mm,
-    bill_area  = bill_depth_mm * bill_length_mm 
-  )   
+    bill_area  = bill_depth_mm * bill_length_mm
+  )
 ```
 
 :::
@@ -132,11 +134,11 @@ Et de le faire "_progressivement_"
 ```{.r code-line-numbers="1|2|4,7"}
 library(tidyverse)
 library(palmerpenguins)
-penguins |>                                     
-  mutate(                                       
+penguins |>
+  mutate(
     bill_ratio = bill_depth_mm / bill_length_mm,
-    bill_area  = bill_depth_mm * bill_length_mm 
-  )   
+    bill_area  = bill_depth_mm * bill_length_mm
+  )
 ```
 
 :::
@@ -179,8 +181,8 @@ server <- function(input, output,session) {
 :::
 ::::
 
-\ 
-  
+\
+
 ```{r eval = TRUE, echo=FALSE}
 cat("::: {.columns}")
 cat("::: {.column width='30%'}")
@@ -243,7 +245,7 @@ shiny::runApp()
 :::
 ::::
 
-\ 
+\
 
 ```{r eval = TRUE, echo=FALSE}
 cat("::: {.center-items }")
@@ -275,7 +277,7 @@ un carré orange
 
 ::: {.center-items}
 peut devenir
-::: 
+:::
 
 ::: {.dashed-box-blue}
 un carré bleu
@@ -292,9 +294,9 @@ un carré orange
 
 ## Les call out
 
-Ce sont des composants nativement intégrés dans Quarto. 
+Ce sont des composants nativement intégrés dans Quarto.
 
-Notez qu'il existe cinq types d'appel, à savoir : 
+Notez qu'il existe cinq types d'appel, à savoir :
 `note`, `tip`, `warning`, `caution`, and `important`.
 
 :::{.callout-warning}
