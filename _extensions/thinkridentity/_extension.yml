@@ -6,8 +6,8 @@ contributes:
   formats:
     revealjs:
       menu:
-        titleSelector: 'h1'
-        useTextContentForMissingTitles: false 
+        titleSelector: "h1"
+        useTextContentForMissingTitles: false
         hideMissingTitles: true
       slideNumber: true
       theme: [default, thinkridentity.scss]
@@ -19,5 +19,6 @@ contributes:
         data-background-image: background.png
       code-annotations: hover
       chalkboard: true
+      scrollActivationWidth: 0
       execute:
         echo: true
