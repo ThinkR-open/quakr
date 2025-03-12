@@ -10,13 +10,20 @@ For now, this extension provides 1 `reveals` format:
 
 - `thinkridentity`
 
-## Installation
+## Usage
 
 To start a new presentation:
 
 ```bash
 quarto use template ThinkR-open/quakr
 ```
+
+To update/install this template:
+
+```bash
+quarto add ThinkR-open/quakr
+```
+
 ## Dev
 
 All developments are to be carried out on the `dev` branch.
