@@ -1,0 +1,40 @@
+$schema: https://m.canouil.dev/quarto-wizard/assets/schema/v1/extension-schema.json
+
+formats:
+  thinkridentity-revealjs:
+    menu:
+      type: object
+      description: Reveal.js menu plugin options.
+      properties:
+        titleSelector:
+          type: string
+          description: CSS selector used to build menu titles.
+        useTextContentForMissingTitles:
+          type: boolean
+          description: Fallback to text content when title attributes are missing.
+        hideMissingTitles:
+          type: boolean
+          description: Hide menu entries without titles.
+    slideNumber:
+      type: boolean
+      description: Show slide numbers.
+    logo:
+      type: string
+      description: Path to logo image.
+      completion:
+        type: file
+    footer:
+      type: string
+      description: Footer content shown on slides.
+    chalkboard:
+      type: boolean
+      description: Enable chalkboard overlay plugin.
+    code-annotations:
+      type: string
+      enum:
+        - hover
+        - select
+      description: Interaction mode for code annotations.
+    scrollActivationWidth:
+      type: number
+      description: Minimum width for scroll activation behaviour.
