@@ -1,6 +1,6 @@
 {
   "thinkridentity revealjs format": {
-    "prefix": "thinkridentity-format",
+    "prefix": "format",
     "body": [
       "format:",
       "  thinkridentity-revealjs:",
@@ -11,7 +11,7 @@
     "description": "Insert a basic thinkridentity-revealjs format block."
   },
   "Center slide container": {
-    "prefix": "thinkridentity-center-slide",
+    "prefix": "center-slide",
     "body": [
       "::: {.center-slide}",
       "${1:Centered content}",
