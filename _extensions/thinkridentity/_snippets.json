@@ -1,0 +1,22 @@
+{
+  "thinkridentity revealjs format": {
+    "prefix": "thinkridentity-format",
+    "body": [
+      "format:",
+      "  thinkridentity-revealjs:",
+      "    slideNumber: true",
+      "    chalkboard: true",
+      "    code-annotations: hover"
+    ],
+    "description": "Insert a basic thinkridentity-revealjs format block."
+  },
+  "Center slide container": {
+    "prefix": "thinkridentity-center-slide",
+    "body": [
+      "::: {.center-slide}",
+      "${1:Centered content}",
+      ":::"
+    ],
+    "description": "Insert a centered slide content container used in quakr examples."
+  }
+}
